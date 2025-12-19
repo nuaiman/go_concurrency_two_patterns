@@ -39,7 +39,7 @@ func main() {
 		close(resultChannel)
 	} ()
 
-	for i:=0; i<len(images); i++ {
+	for i:=range images {
 		jobChannel <- images[i]
 	}
 
