@@ -10,7 +10,6 @@ func worker(resultChannel chan string, jobChannel chan string) {
 	for job := range jobChannel {
 		time.Sleep(50 * time.Millisecond)
 		fmt.Printf("Image processed: %s \n", job)
-
 		resultChannel <- job
 	}
 }
